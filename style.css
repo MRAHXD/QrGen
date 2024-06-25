@@ -22,6 +22,7 @@ header{
     background-color: rgba(255, 255, 255, 0.925);
 }
 
+
 #nav2 > a{
     text-decoration: none;
     color: #393E41;
@@ -30,6 +31,15 @@ header{
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+#icon{
+    height: 3rem;
+    width: 3rem;
+    background-image: url('/src/qr-code-scan.svg');
+    background-size: cover;
+    margin-right: 1rem;
+    
 }
 #nav2{
     flex: 2;
@@ -46,16 +56,24 @@ header{
 #nav3{
     flex:1;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
-
-#nav3 > a{
-    font-size: 1.5rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #393E41;
-    text-decoration: none;
+#username{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.656);
 }
+
+#user-profile-img{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50rem;
+    background-image: url("/src/user-profile.jpg");
+    background-size: cover;
+    margin-right: 0.5rem;
+}
+
 
 #title{
     text-decoration: none;

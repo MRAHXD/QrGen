@@ -1,126 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qr-code-Generator</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <div id="navbar">
-        <div id="nav1" class="nav-boxes">
-          <a href="index.html" id="title">QRGEN</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up Page</title>
+    <link rel="stylesheet" href="./login/login.css">
+    <script type="module" src="./signup/signup.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h2>Sign up</h2>
+            <form>
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button id="signup-btn">Sign up</button>
+                <p id="error-msg"></p>
+            </form>
+            <p>Already have an account? <a href="./login/login.html" id="login-link">Login</a></p>
+            
         </div>
-        <div id="nav2" class="nav-boxes">
-          <a href="#home">Home</a>
-          <a href="#features">Features</a>
-          <a>How It Works</a>
-          <a>Contact</a>
+        <div>
+            <button  id="qr-signup-btn" onclick="window.location.href='./qrgen/qr-gen.html'">Temporary Need?</button>
         </div>
-        <div id="nav3" class="nav-boxes">
-          <a href="login.html" id="sign-in-button">Sign In</a>
-          <a href="signup.html" class="register-btn" style="color: white"
-            id="sign-up-button">Sign Up</a>
-        </div>
-      </div>
-
-      <div id="home">
-        <div id="txt-box-1">
-          <a>Generate Qr Code Instantly</a>
-        </div>
-        <div id="txt-box-2">
-          <a>Effortlessly create custom QR codes for your business</a>
-        </div>
-        <div id="txt-box-3">
-          <div id="box-3-1"><a href="qr-gen.html">Get Started</a></div>
-          <div id="box-3-2"><a>Learn More -></a></div>
-        </div>
-      </div>
-    </header>
-    <div id="features">
-      <div id="upper">
-        <a id="upper-txt1">FEATURES</a>
-        <a id="upper-txt2">Powerful Features of Our QR Code Generator</a>
-        <a id="upper-txt3"
-          >Unlock the potential of QR codes with our advanced features</a
-        >
-      </div>
-      <div id="lower">
-        <div class="boxes-container" id="lower-box-1">
-          <div class="lower-boxes">
-            <div class="box-icon">
-              <i
-                class="fa-regular fa-object-ungroup"
-                style="color: white; font-size: 2rem"
-              ></i>
-            </div>
-            <div class="box-txt">
-              <h1>High-Quality Images</h1>
-              <a
-                >Generate QR codes with high-resolution images for optimal
-                scanning</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="boxes-container" id="lower-box-2">
-          <div class="lower-boxes">
-            <div class="box-icon">
-              <i
-                class="fa-regular fa-object-ungroup"
-                style="color: white; font-size: 2rem"
-              ></i>
-            </div>
-            <div class="box-txt">
-              <h1>Customizable QR Codes</h1>
-              <a>Easily create QR codes with custom colors and designs</a>
-            </div>
-          </div>
-        </div>
-        <div class="boxes-container" id="lower-box-3">
-          <div class="lower-boxes">
-            <div class="box-icon">
-              <i
-                class="fa-regular fa-object-ungroup"
-                style="color: white; font-size: 2rem"
-              ></i>
-            </div>
-            <div class="box-txt">
-              <h1>Multiple Formats</h1>
-              <a
-                >Supports various QR code formats including URL, text, and
-                contact information</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="boxes-container" id="lower-box-4">
-          <div class="lower-boxes">
-            <div class="box-icon">
-              <i
-                class="fa-regular fa-object-ungroup"
-                style="color: white; font-size: 2rem"
-              ></i>
-            </div>
-            <div class="box-txt">
-              <h1>Analytics Tracking</h1>
-              <a
-                >Track and analyze the performance of your QR codes with
-                detailed analytics
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <div></div>
-  </body>
+
+</body>
 </html>

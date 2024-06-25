@@ -43,6 +43,7 @@ submitBtn.addEventListener("click", async () => {
   // Store the data URL for later use
   qrCodeDataURL = container.firstChild.toDataURL("image/png");
   downloadBtn.classList.remove("hide");
+
 });
 
 downloadBtn.addEventListener("click", () => {

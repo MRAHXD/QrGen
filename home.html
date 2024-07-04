@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Qr-code-Generator</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script type="module" src="home.js"></script>
   </head>
   <body>
@@ -16,14 +21,14 @@
           <div id="title-container"><a href="home.html" id="title">QRGEN</a></div>
         </div>
         <div id="nav2" class="nav-boxes">
-          <a href="#home">Home</a>
+          <a href="home.html">Home</a>
           <a href="#features">Features</a>
-          <a>Saved QrCodes</a>
-          <a>Contact</a>
+          <a href="#qrcode">QrCode</a>
+          <a href="contact.html">Contact</a>
         </div>
         <div id="nav3" class="nav-boxes">
           <div id="user-profile-img"></div>
-          <div><a id="username">username</a></div>
+          <div><a id="username"></a></div>
         </div>
       </div>
 
@@ -35,7 +40,7 @@
           <a>Effortlessly create custom QR codes for your business</a>
         </div>
         <div id="txt-box-3">
-          <div id="box-3-1"><a href="./qrgen/qr-gen.html">Get Started</a></div>
+          <div id="box-3-1"><a href="#qrcode">Get Started</a></div>
           <div id="box-3-2"><a>Learn More -></a></div>
         </div>
       </div>
@@ -117,7 +122,26 @@
         </div>
       </div>
     </div>
-    <div></div>
+    <div id="qrcode">
+      <div id="qrbody">
+        <div class="wrapper">
+          <input type="text" id="userInput" placeholder="Enter some text or URL" />
+          <div class="options">
+            <select class="sizeOptions">
+              <option value="100" selected>100 x 100</option>
+              <option value="200">200 x 200</option>
+              <option value="300">300 x 300</option>
+            </select>
+            <input type="color" id="BGColor" class="color-inp" />
+            <input type="color" id="FGColor" class="color-inp" />
+          </div>
+          <div class="box">
+            <button id="submit" disabled>Generate</button>
+            <a href="#" id="download">Download</a>
+          </div>
+          <div class="container"></div>
+      </div>
+    </div>
     
   </body>
 </html>

@@ -1,6 +1,9 @@
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getDatabase , ref, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyAS0CCS0GWO3z_FcltqL-qpx6byiRVtoOY",
   authDomain: "qrgen-web.firebaseapp.com",
@@ -24,5 +27,13 @@ onAuthStateChanged(auth, (user) => {
     console.log("User is not signed in");
   }
 });
+
+ 
+
+
+
+
+
+
 
 

@@ -10,6 +10,8 @@ header{
     height: 100vh;
     background-image: url("home-bg.jpg");
     background-size: cover;
+    
+
 }
 #navbar {
     height: 70px;
@@ -81,21 +83,12 @@ header{
     color: #393E41;
 }
 
-.register-btn{
-    background-color: #FE5F55;
-    height: 40px;
-    width: 100px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #box-3-1 > a{
-    background-color: #FE5F55;
+    background:linear-gradient(#fe6055b1,#456cf8c1 );
     height: 40px;
-    width: 100px;
-    border-radius: 7px;
+    width: 120px;
+    font-weight: 600;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,6 +121,7 @@ header{
 }
 
 #box-3-1{
+    
     font-size: 1.2rem;
     color: white;
 }
@@ -145,7 +139,7 @@ header{
 
 #features{
     height: 100vh;
-    background-color: #544b75;
+    background: linear-gradient(#456cf8, #3dc3ecbe);
     display: flex;
     flex-direction: column;
 }
@@ -190,18 +184,28 @@ header{
 }
 
 .lower-boxes{
-    height: 150px;
+    height: 180px;
     width: 90%;
-    background-color: #5f577c;
+    background-color: #5f577c13;
     display: flex;
-    border-radius: 5px;
-    padding-top: 20px;
+    border-radius: 1rem;
+    padding-top: 5px;
+    
+}
+
+.lower-boxes:hover{
+    background-color: #5f577c4a ;
+    scale: 1.025;
+    
 }
 .box-icon{
     width: 100px;
     display: flex;
     justify-content: center;
     margin-top: 10px;
+}
+.box-icon > svg {
+    color: white;
 }
 .box-txt > h1{
     color: white;
@@ -210,6 +214,7 @@ header{
 .box-txt > a{
     color: white;
     font-size: 1.5rem;
+    
 }
 
 

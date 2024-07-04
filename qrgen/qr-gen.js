@@ -73,3 +73,4 @@ window.onload = () => {
   downloadBtn.classList.add("hide");
   submitBtn.disabled = true;
 };
+const test = document.getElementById("test");

@@ -96,7 +96,14 @@ submitBtn.addEventListener("click", async () => {
   
 });
 
-// saved
+var qrcode = new QRCode(document.getElementById("saved1"), {
+  text: "https://google.com",
+  width: 200,
+  height: 200,
+  colorDark : "#000000",
+  colorLight : "#ffffff",
+  correctLevel : QRCode.CorrectLevel.H
+});
  
 
 

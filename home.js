@@ -1,6 +1,5 @@
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getAuth , signOut ,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAS0CCS0GWO3z_FcltqL-qpx6byiRVtoOY",
@@ -11,6 +10,8 @@ const firebaseConfig = {
   appId: "1:293384391551:web:d275f1661a73795b3be84a",
 };
 const app = initializeApp(firebaseConfig);
+const LogoutBtn = document.getElementById('log-out-btn');
+const username = document.getElementById('username');
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
@@ -23,8 +24,28 @@ onAuthStateChanged(auth, (user) => {
   } else {
     // User is signed out
     console.log("User is not signed in");
+    LogoutBtn.style.display="none";
+    username.innerText="login";
+    username.href="index.html";
   }
 });
+
+// log out
+
+LogoutBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  signOut(auth).then(() => {
+    // Sign-out successful.
+    alert("log out successfully");
+
+  }).catch((error) => {
+    // An error happened.
+  });
+})
+
+  
+
 
 const container = document.querySelector(".container");
 const userInput = document.getElementById("userInput");
@@ -33,6 +54,7 @@ const downloadBtn = document.getElementById("download");
 const sizeOptions = document.querySelector(".sizeOptions");
 const BGColor = document.getElementById("BGColor");
 const FGColor = document.getElementById("FGColor");
+
 let QR_Code;
 let sizeChoice, BGColorChoice, FGColorChoice, qrCodeDataURL;
 
@@ -71,8 +93,12 @@ submitBtn.addEventListener("click", async () => {
   // Store the data URL for later use
   qrCodeDataURL = container.firstChild.toDataURL("image/png");
   downloadBtn.classList.remove("hide");
-
+  
 });
+
+// saved
+ 
+
 
 downloadBtn.addEventListener("click", () => {
   const downloadLink = document.createElement("a");

@@ -67,6 +67,9 @@ header {
   background-size: cover;
   margin-right: 0.5rem;
 }
+#log-out-btn-div{
+  margin-left: 1rem;
+}
 
 #title {
   text-decoration: none;
@@ -341,3 +344,6 @@ select option {
 .hide {
   display: none;
 }
+
+
+/* saved */
